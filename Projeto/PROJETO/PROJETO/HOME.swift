@@ -5,24 +5,24 @@ struct HOME: View {
         ScrollView(.horizontal){
             
             ZStack{
-                Color.black
+                Color.white
                 HStack{
                     // primeiro quadrado
                     ZStack{
-                        Color.yelow
-                            .ignoresSafeArea()
-                            .frame(width: 390, height: .infinity)
+                        ExtractedView()
                             
                         
                         VStack{
                             //imagem do topo
+                
                                 Image(systemName: "sun.max.fill")
                                 .foregroundColor(.white)
                                 .font(.largeTitle)
-                            .padding(.init(top: -1, leading: -120, bottom: 0, trailing: 0))
+                
+                            Spacer()
                 
                             //tarefas
-                            RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
+                            /*RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                                 .frame(width: 250, height: 120)
                                 .foregroundStyle(.lightyellow)
                             
@@ -33,15 +33,16 @@ struct HOME: View {
                             RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                                 .frame(width: 250, height: 120)
                                 .foregroundStyle(.lightyellow)
+                             */
                         }
                     }
                     //segundo quadrado
                     
                     ZStack{
                         
-                        Color.lightblue
+                        Color.night
                             .ignoresSafeArea()
-                            .frame(width: 390, height: .infinity)
+                            .frame(width: UIScreen.main.bounds.width - 0)
                         VStack{
                             //imagem
                             
@@ -49,9 +50,10 @@ struct HOME: View {
                                 Image(systemName: "cloud.sun.fill")
                                 .foregroundColor(.white)
                                 .font(.largeTitle)
-                            .padding(.init(top: -110, leading: -120, bottom: 0, trailing: 0))
+        
                             
-                            
+                            Spacer()
+                            /*
                             RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                                 .frame(width: 250, height: 120)
                                 .foregroundStyle(.mediumblue)
@@ -63,6 +65,7 @@ struct HOME: View {
                             RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                                 .frame(width: 250, height: 120)
                                 .foregroundStyle(.mediumblue)
+                             */
                         }
                     }
                     //terceiro quadrado
@@ -70,7 +73,8 @@ struct HOME: View {
                     ZStack{
                         Color.darkblue
                             .ignoresSafeArea()
-                            .frame(width: 390, height: .infinity)
+                            .frame(width: UIScreen.main.bounds.width - 0)
+
                         
                         VStack{
                             //imagem topo
@@ -78,10 +82,10 @@ struct HOME: View {
                                     Image(systemName: "moon.stars.fill")
                                     .foregroundColor(.white)
                                     .font(.largeTitle)
-                                .padding(.init(top: -110, leading: -120, bottom: 0, trailing: 0))
+                                Spacer()
                                 
                             
-                            //
+                            /*
                             RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                                 .frame(width: 250, height: 120)
                                 .foregroundStyle(.babyblue)
@@ -93,18 +97,37 @@ struct HOME: View {
                             RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                                 .frame(width: 250, height: 120)
                                 .foregroundStyle(.babyblue)
+                             
+                             */
                         }
                     }
                     
                 }
-                .ignoresSafeArea()
+                
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .center)
+   
             }
-        
+    
         }
-        .scrollTargetBehavior(.viewAligned)
+
+
+        .scrollIndicators(.hidden)
         .ignoresSafeArea()
+        .scrollTargetBehavior(.paging)
+
     }
+    
 }
 #Preview {
     HOME()
+}
+
+struct ExtractedView: View {
+    var body: some View {
+        Color.afternoon
+            .ignoresSafeArea()
+            .frame(width: UIScreen.main.bounds.width - 0)
+        
+            .scrollTargetLayout()
+    }
 }

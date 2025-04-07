@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012F3BAF2DA43AC000AC8ED2 /* CRIAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012F3BAE2DA43AC000AC8ED2 /* CRIAR.swift */; };
+		012F3BB12DA449EE00AC8ED2 /* POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012F3BB02DA449EE00AC8ED2 /* POST.swift */; };
+		012F3BB72DA44E7B00AC8ED2 /* NODE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012F3BB62DA44E7B00AC8ED2 /* NODE.swift */; };
 		018232592D9F165800ECF086 /* PROJETOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018232582D9F165800ECF086 /* PROJETOApp.swift */; };
 		0182325B2D9F165800ECF086 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182325A2D9F165800ECF086 /* ContentView.swift */; };
 		0182325D2D9F165900ECF086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0182325C2D9F165900ECF086 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		012F3BAE2DA43AC000AC8ED2 /* CRIAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRIAR.swift; sourceTree = "<group>"; };
+		012F3BB02DA449EE00AC8ED2 /* POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POST.swift; sourceTree = "<group>"; };
+		012F3BB62DA44E7B00AC8ED2 /* NODE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NODE.swift; sourceTree = "<group>"; };
 		018232552D9F165800ECF086 /* PROJETO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PROJETO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018232582D9F165800ECF086 /* PROJETOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PROJETOApp.swift; sourceTree = "<group>"; };
 		0182325A2D9F165800ECF086 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +64,9 @@
 				018232582D9F165800ECF086 /* PROJETOApp.swift */,
 				018232682D9F17E700ECF086 /* HOME.swift */,
 				0182326A2D9F1B1800ECF086 /* TAREFAS.swift */,
+				012F3BB02DA449EE00AC8ED2 /* POST.swift */,
+				012F3BB62DA44E7B00AC8ED2 /* NODE.swift */,
+				012F3BAE2DA43AC000AC8ED2 /* CRIAR.swift */,
 				0182325A2D9F165800ECF086 /* ContentView.swift */,
 				0182325C2D9F165900ECF086 /* Assets.xcassets */,
 				0182325E2D9F165900ECF086 /* Preview Content */,
@@ -143,6 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012F3BAF2DA43AC000AC8ED2 /* CRIAR.swift in Sources */,
+				012F3BB12DA449EE00AC8ED2 /* POST.swift in Sources */,
+				012F3BB72DA44E7B00AC8ED2 /* NODE.swift in Sources */,
 				0182325B2D9F165800ECF086 /* ContentView.swift in Sources */,
 				018232692D9F17E700ECF086 /* HOME.swift in Sources */,
 				0182326B2D9F1B1800ECF086 /* TAREFAS.swift in Sources */,

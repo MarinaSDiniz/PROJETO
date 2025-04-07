@@ -23,51 +23,49 @@ struct ContentView: View {
     var body: some View {
         VStack{
             ZStack{
-                Spacer().fullScreenCover(isPresented: $presented, content: {
-                    Button(action: {
-                        presented.toggle()
-                    }, label: {
-                        Text("Close")
-                            .frame(width: 200, height: 50)
-                            .background(Color.pink)
-                            .cornerRadius(12)
-                    })
-                })
+                Spacer()
+                  //  .fullScreenCover(isPresented: $presented, content: {
+//                    Button(action: {
+//                        presented.toggle()
+//                    }, label: {
+//                        //NavigationLink(destination: CRIAR())
+//                        CRIAR()
+                Button("Show Sheet") {
+                    presented.toggle()
+                       }.sheet(isPresented: $presented){
+                    CRIAR()
+                }
+              //  })
                 switch selectedIndex {
                 case 0:
-                    NavigationView {
+                    NavigationStack {
                         VStack{
                             HOME()
                         }
-                        .navigationTitle("Home")
                     }
                 case 1:
-                    NavigationView {
+                    NavigationStack {
                         VStack{
-                            Text("segunda")
+                            Text("conquistas")
                         }
-                        .navigationTitle("Conquistas")
                     }
                 case 3:
-                    NavigationView {
+                    NavigationStack {
                         VStack{
-                            Text("terceira")
+                            TAREFAS()
                         }
-                        .navigationTitle("Criar")
                     }
                 case 4:
-                    NavigationView {
+                    NavigationStack {
                         VStack{
-                            Text("quarta")
+                            Text("configuracoes")
                         }
-                        .navigationTitle("Tarefas")
                     }
                 default:
-                    NavigationView {
+                    NavigationStack {
                         VStack{
-                            Text("config")
+                            Text("error")
                         }
-                        .navigationTitle("Configuracoes")
                     }
                 }
             }
