@@ -47,7 +47,8 @@ struct ContentView: View {
                 case 1:
                     NavigationStack {
                         VStack{
-                            Text("conquistas")
+                            //Text("conquistas")
+                            AchievementView()
                         }
                     }
                 case 3:
